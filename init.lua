@@ -1,3 +1,8 @@
+-- integration test
+if minetest.settings:get_bool("technic_armor.enable_technic_armor_integration_test") then
+	dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/integration_test.lua")
+end
+
 -- support for i18n
 local S = minetest.get_translator("3d_armor")
 
