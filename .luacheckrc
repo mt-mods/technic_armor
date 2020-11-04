@@ -1,4 +1,4 @@
-
+allow_defined_top = true
 unused_args = false
 
 globals = {
