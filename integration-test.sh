@@ -4,10 +4,14 @@
 CFG=/tmp/minetest.conf
 MTDIR=/tmp/mt
 WORLDDIR=${MTDIR}/worlds/world
+WORLDMODDIR=${WORLDDIR}/worldmods
 
 cat <<EOF > ${CFG}
  technic_armor.enable_technic_armor_integration_test = true
 EOF
+
+# clone dependencies
+git clone --depth 1 https://github.com/minetest-mods/3d_armor.git ${WORLDMODDIR}/3d_armor
 
 mkdir -p ${WORLDDIR}
 chmod 777 ${MTDIR} -R
