@@ -139,8 +139,7 @@ for material, m in pairs(materials) do
 				armor_heal = m.heal,
 				armor_use = m.use,
 				armor_radiation = math.floor(p.radlevel * m.radiation)
-			},
-			wear = 0,
+			}
 		})
 		minetest.register_craft({
 			output = name,
