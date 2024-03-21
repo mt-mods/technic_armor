@@ -47,14 +47,7 @@ if minetest.get_modpath("technic_worldgen") then
 	}
 end
 
-local tin_ingot
-
-if minetest.registered_items["default:tin_ingot"] then
-	tin_ingot = "default:tin_ingot"
-end
-
 if minetest.get_modpath("moreores") then
-	tin_ingot = "moreores:tin_ingot"
 	materials.silver = {
 		name = S("Silver"),
 		craft_item = "moreores:silver_ingot",
@@ -65,10 +58,10 @@ if minetest.get_modpath("moreores") then
 	}
 end
 
-if tin_ingot then
+if minetest.get_modpath("default") then
 	materials.tin = {
 		name = S("Tin"),
-		craft_item = tin_ingot,
+		craft_item = "moreores:tin_ingot",
 		armor = 1.6,
 		heal = 0,
 		use = 750,
