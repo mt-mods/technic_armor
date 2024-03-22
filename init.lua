@@ -61,7 +61,7 @@ end
 if minetest.get_modpath("default") then
 	materials.tin = {
 		name = S("Tin"),
-		craft_item = "moreores:tin_ingot",
+		craft_item = "default:tin_ingot",
 		armor = 1.6,
 		heal = 0,
 		use = 750,
